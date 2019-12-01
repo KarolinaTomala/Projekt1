@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@project.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ProjectController">
+   <children>
+      <Label text="Enter your planet's data:">
+         <VBox.margin>
+            <Insets left="20.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox maxHeight="15.0" prefHeight="15.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="140.0" prefHeight="15.0" prefWidth="140.0" text="Planets name">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="140.0" prefHeight="15.0" prefWidth="140.0" text="Distance [A.U.]">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="140.0" prefHeight="15.0" prefWidth="140.0" text="Eccentricity">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="140.0" prefHeight="15.0" prefWidth="140.0" text="Method">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="50.0" prefHeight="15.0" prefWidth="50.0" text="Max εa ">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" maxHeight="15.0" maxWidth="50.0" prefHeight="15.0" prefWidth="50.0" text="Color">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="textFieldName" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" promptText="Earth">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="textFieldDistance" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" promptText="1">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="textFieldEccentricity" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0" promptText="0.0167">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <ChoiceBox fx:id="methodBox" maxHeight="25.0" maxWidth="160.0" prefHeight="25.0" prefWidth="160.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <TextField fx:id="textFieldEa" maxWidth="70.0" prefHeight="25.0" prefWidth="70.0" promptText="0.01">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <ColorPicker fx:id="color" maxWidth="70.0" prefHeight="25.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </ColorPicker>
+         </children>
+         <VBox.margin>
+            <Insets top="2.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="430.0" prefWidth="600.0">
+         <children>
+            <LineChart fx:id="chart" prefWidth="600.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <VBox alignment="CENTER" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnDraw" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnDrawPressed" prefHeight="50.0" prefWidth="140.0" text="Draw!">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label text="You can choose">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="one of planets below:" />
+                  <Button fx:id="btnMercury" mnemonicParsing="false" onAction="#btnMercuryPressed" prefWidth="120.0" text="Mercury">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnVenus" mnemonicParsing="false" onAction="#btnVenusPressed" prefWidth="120.0" text="Venus">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnEarth" mnemonicParsing="false" onAction="#btnEarthPressed" prefWidth="120.0" text="Earth">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnMars" mnemonicParsing="false" onAction="#btnMarsPressed" prefWidth="120.0" text="Mars">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnJupiter" mnemonicParsing="false" onAction="#btnJupiterPressed" prefWidth="120.0" text="Jupiter">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnSaturn" mnemonicParsing="false" onAction="#btnSaturnPressed" prefWidth="120.0" text="Saturn">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnUranus" mnemonicParsing="false" onAction="#btnUranusPressed" prefWidth="120.0" text="Uranus">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnNeptune" mnemonicParsing="false" onAction="#btnNeptunePressed" prefWidth="120.0" text="Neptune">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="30.0" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btnClear" maxHeight="30.0" minHeight="0.0" mnemonicParsing="false" onAction="#btnClearPressed" prefHeight="30.0" text="Clear">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSave" maxHeight="30.0" minHeight="0.0" mnemonicParsing="false" onAction="#btnSavePressed" prefHeight="30.0" text="Save to txt file">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,149 @@
+.background {
+    -fx-background-color: #252525;
+}
+
+.root {
+    -fx-background-color: #252525;
+}
+
+.label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.button{
+    -fx-background-radius: 0;
+    -fx-background-color: #333333;
+    -fx-border-color: #858585;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: derive(#377090, 70%);
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.text-field {
+    -fx-background-radius: 0, 0;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #777;
+
+    -fx-background-color: #111;
+    -fx-border-color: #666;
+
+    -fx-highlight-fill: #377090;
+    -fx-highlight-text-fill: #272040;
+}
+
+.choice-box  {
+    -fx-background-color: transparent, #666666, transparent, #111;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 2px 2px 2px 2px;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 11;
+}
+
+.choice-box > .open-button {
+    -fx-background-color: transparent;
+}
+
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+
+.choice-box .context-menu { -fx-background-color: #111; }
+.choice-box .menu-item:focused { -fx-background-color: #252525; }
+.choice-box .menu-item:focused { -fx-background-color: #377090; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: #272040; }
+
+.choice-box:hover {
+    -fx-background-color: transparent, #999999, transparent, #111;
+}
+
+.choice-box:focused {
+    -fx-background-color: transparent, white, transparent, #111;
+    -fx-background-insets: -1.4, 0, 1, 2;
+
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.choice-box:focused:hover {
+    -fx-background-color: transparent, #999999, transparent, #111;
+}
+
+.chart {
+    -fx-padding: 5px;
+}
+.chart-plot-background {
+    -fx-background-color: #353535;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-font-size: 1.4em;
+}
+.chart-legend {
+    -fx-background-color: #353535;
+    -fx-background-insets: 0 0 -1 0, 0,1;
+    -fx-background-radius: 4,4,3;
+    -fx-padding: 6px;
+}
+
+.chart-legend > .label {
+    -fx-text-fill: #111;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #707070;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #707070;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 0;
+}
+
+.color-picker {
+    -fx-background-radius: 0;
+    -fx-background-color: #333333;
+    -fx-border-color: #858585;
+}
+.color-picker .color-picker-label .text {
+    -fx-fill: white;
+}
+
+
+
+
+
+
+
+
+
